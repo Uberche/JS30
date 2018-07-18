@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Key Detection</title>
+  <script type="text/javascript" src="http://www.cornify.com/js/cornify.js"></script>
+</head>
+<body>
+<script>
+	let keysArr = [];
+	const konami = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a", "Enter"];
+	window.addEventListener('keyup', (e) => {
+		(e.key === konami[keysArr.length]) ? keysArr.push(e.key) : keysArr = [];
+		if (konami.length === keysArr.length) cornify_add();
+	});
+</script>
+</body>
+</html>
